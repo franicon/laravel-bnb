@@ -1,7 +1,11 @@
 <template>
-    <router-link to="/"> Home </router-link>
-    <router-link to="/contact" class="mb-5"> contact </router-link>
-    <router-view></router-view>
+    <nav class="navbar bg-white border-bottom navbar-light">
+        <router-link :to="{ name: 'home' }" class="px-4 navbar-brand mr-auto"> LaravelBnb </router-link>
+        <router-link :to="{ name: 'contact' }" class=" px-4 btn nav-button"> contact </router-link>
+    </nav>
+    <div class="container mb-4 mt-4 pe-4">
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
