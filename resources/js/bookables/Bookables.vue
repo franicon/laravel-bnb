@@ -32,7 +32,7 @@ export default {
     created() {
         this.loading = true;
         axios.get('/api/bookables').then(res => {
-            this.bookables = res.data
+            this.bookables = res.data.data
             this.loading = false;
         });
     },
